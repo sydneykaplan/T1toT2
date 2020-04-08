@@ -19,7 +19,7 @@ import sys
 def get_images(imgdir):
     # get image paths
     imgpaths = []
-    imgpaths = sorted(glob.glob(t1dir + '\\*nii.gz'))
+    imgpaths = sorted(glob.glob(imgdir + '\\*nii.gz'))
     numimgs = len(imgpaths)
     
     # get image size
