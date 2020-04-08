@@ -103,7 +103,7 @@ def main(args):
     
     # training parameters
     learning_rate = 0.001
-    batch_size = 10
+    batch_size = 2
     num_steps = math.ceil(numimgs / batch_size) * 100 # roughly 100 epochs
     display_step = 10
     kernel_size = 3
