@@ -13,10 +13,8 @@ import sys
 def get_images(imgdir):
     # get image paths
     imgpaths = []
-    imgpaths = sorted(glob.glob(imgdir + '\\*nii.gz'))
+    imgpaths = sorted(glob.glob(imgdir + '/*nii.gz'))
     numimgs = len(imgpaths)
-    print(imgpaths)
-    print(imgdir)
     
     # get image size
     img = nib.load(imgpaths[0])
