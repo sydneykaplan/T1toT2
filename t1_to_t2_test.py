@@ -84,23 +84,23 @@ def main(args):
         exit()
     
     # get input arguments
-    t1dir = argv[0]
-    outdir = argv[1]
+    t1dir = args[0]
+    outdir = args[1]
     weights = {
-        'wc1': tf.compat.v1.get_variable(name='wc1', dtype=tf.dtypes.float64, initializer=np.load(argv[2])),
-        'wc2': tf.compat.v1.get_variable(name='wc2', dtype=tf.dtypes.float64, initializer=np.load(argv[3])),
-        'wc3': tf.compat.v1.get_variable(name='wc3', dtype=tf.dtypes.float64, initializer=np.load(argv[4])),
-        'wc4': tf.compat.v1.get_variable(name='wc4', dtype=tf.dtypes.float64, initializer=np.load(argv[5])),
-        'wc5': tf.compat.v1.get_variable(name='wc5', dtype=tf.dtypes.float64, initializer=np.load(argv[6])),
-        'wc6': tf.compat.v1.get_variable(name='wc6', dtype=tf.dtypes.float64, initializer=np.load(argv[7]))}
+        'wc1': tf.compat.v1.get_variable(name='wc1', dtype=tf.dtypes.float64, initializer=np.load(args[2])),
+        'wc2': tf.compat.v1.get_variable(name='wc2', dtype=tf.dtypes.float64, initializer=np.load(args[3])),
+        'wc3': tf.compat.v1.get_variable(name='wc3', dtype=tf.dtypes.float64, initializer=np.load(args[4])),
+        'wc4': tf.compat.v1.get_variable(name='wc4', dtype=tf.dtypes.float64, initializer=np.load(args[5])),
+        'wc5': tf.compat.v1.get_variable(name='wc5', dtype=tf.dtypes.float64, initializer=np.load(args[6])),
+        'wc6': tf.compat.v1.get_variable(name='wc6', dtype=tf.dtypes.float64, initializer=np.load(args[7]))}
 
     biases = {
-        'bc1': tf.compat.v1.get_variable(name='bc1', dtype=tf.dtypes.float64, initializer=np.load(argv[8])),
-        'bc2': tf.compat.v1.get_variable(name='bc2', dtype=tf.dtypes.float64, initializer=np.load(argv[9])),
-        'bc3': tf.compat.v1.get_variable(name='bc3', dtype=tf.dtypes.float64, initializer=np.load(argv[10])),
-        'bc4': tf.compat.v1.get_variable(name='bc4', dtype=tf.dtypes.float64, initializer=np.load(argv[11])),
-        'bc5': tf.compat.v1.get_variable(name='bc5', dtype=tf.dtypes.float64, initializer=np.load(argv[12])),
-        'bc6': tf.compat.v1.get_variable(name='bc6', dtype=tf.dtypes.float64, initializer=np.load(argv[13]))}
+        'bc1': tf.compat.v1.get_variable(name='bc1', dtype=tf.dtypes.float64, initializer=np.load(args[8])),
+        'bc2': tf.compat.v1.get_variable(name='bc2', dtype=tf.dtypes.float64, initializer=np.load(args[9])),
+        'bc3': tf.compat.v1.get_variable(name='bc3', dtype=tf.dtypes.float64, initializer=np.load(args[10])),
+        'bc4': tf.compat.v1.get_variable(name='bc4', dtype=tf.dtypes.float64, initializer=np.load(args[11])),
+        'bc5': tf.compat.v1.get_variable(name='bc5', dtype=tf.dtypes.float64, initializer=np.load(args[12])),
+        'bc6': tf.compat.v1.get_variable(name='bc6', dtype=tf.dtypes.float64, initializer=np.load(args[13]))}
     
     # read in images
     t1imgs, t1imgpaths = get_images(t1dir)
