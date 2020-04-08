@@ -99,7 +99,7 @@ def main(args):
     # read in images
     t1imgs = get_images(t1dir)
     t2imgs = get_images(t2dir)
-    numimgs = len(t1imgs)
+    numimgs = t1imgs.shape[4]
     
     # training parameters
     learning_rate = 0.001
