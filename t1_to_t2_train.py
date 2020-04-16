@@ -105,7 +105,7 @@ def main(args):
     learning_rate = 0.001
     batch_size = 2
     num_steps = math.ceil(numimgs / batch_size) * 100 # roughly 100 epochs
-    display_step = 10
+    display_step = 100
     kernel_size = 3
     num_nodes = 128
     
@@ -155,20 +155,32 @@ def main(args):
         lossval = train(cnn, batch_t1, batch_t2, var_list)
         if i % display_step == 0 or i == 1:
             print('Step %i: batch loss %f' % (i, lossval))
+            np.save(outdir + '/wc1', weights['wc1'].numpy())
+            np.save(outdir + '/wc2', weights['wc2'].numpy())
+            np.save(outdir + '/wc3', weights['wc3'].numpy())
+            np.save(outdir + '/wc4', weights['wc4'].numpy())
+            np.save(outdir + '/wc5', weights['wc5'].numpy())
+            np.save(outdir + '/wc6', weights['wc6'].numpy())
+            np.save(outdir + '/bc1', weights['bc1'].numpy())
+            np.save(outdir + '/bc2', weights['bc2'].numpy())
+            np.save(outdir + '/bc3', weights['bc3'].numpy())
+            np.save(outdir + '/bc4', weights['bc4'].numpy())
+            np.save(outdir + '/bc5', weights['bc5'].numpy())
+            np.save(outdir + '/bc6', weights['bc6'].numpy())
             
     # save out weights
-    np.save(outdir + 'wc1', weights['wc1'].numpy())
-    np.save(outdir + 'wc2', weights['wc2'].numpy())
-    np.save(outdir + 'wc3', weights['wc3'].numpy())
-    np.save(outdir + 'wc4', weights['wc4'].numpy())
-    np.save(outdir + 'wc5', weights['wc5'].numpy())
-    np.save(outdir + 'wc6', weights['wc6'].numpy())
-    np.save(outdir + 'bc1', weights['bc1'].numpy())
-    np.save(outdir + 'bc2', weights['bc2'].numpy())
-    np.save(outdir + 'bc3', weights['bc3'].numpy())
-    np.save(outdir + 'bc4', weights['bc4'].numpy())
-    np.save(outdir + 'bc5', weights['bc5'].numpy())
-    np.save(outdir + 'bc6', weights['bc6'].numpy())
+    np.save(outdir + '/wc1', weights['wc1'].numpy())
+    np.save(outdir + '/wc2', weights['wc2'].numpy())
+    np.save(outdir + '/wc3', weights['wc3'].numpy())
+    np.save(outdir + '/wc4', weights['wc4'].numpy())
+    np.save(outdir + '/wc5', weights['wc5'].numpy())
+    np.save(outdir + '/wc6', weights['wc6'].numpy())
+    np.save(outdir + '/bc1', weights['bc1'].numpy())
+    np.save(outdir + '/bc2', weights['bc2'].numpy())
+    np.save(outdir + '/bc3', weights['bc3'].numpy())
+    np.save(outdir + '/bc4', weights['bc4'].numpy())
+    np.save(outdir + '/bc5', weights['bc5'].numpy())
+    np.save(outdir + '/bc6', weights['bc6'].numpy())
 
 
 if __name__ == "__main__":
