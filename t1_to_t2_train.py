@@ -161,12 +161,12 @@ def main(args):
             np.save(outdir + '/wc4', weights['wc4'].numpy())
             np.save(outdir + '/wc5', weights['wc5'].numpy())
             np.save(outdir + '/wc6', weights['wc6'].numpy())
-            np.save(outdir + '/bc1', weights['bc1'].numpy())
-            np.save(outdir + '/bc2', weights['bc2'].numpy())
-            np.save(outdir + '/bc3', weights['bc3'].numpy())
-            np.save(outdir + '/bc4', weights['bc4'].numpy())
-            np.save(outdir + '/bc5', weights['bc5'].numpy())
-            np.save(outdir + '/bc6', weights['bc6'].numpy())
+            np.save(outdir + '/bc1', biases['bc1'].numpy())
+            np.save(outdir + '/bc2', biases['bc2'].numpy())
+            np.save(outdir + '/bc3', biases['bc3'].numpy())
+            np.save(outdir + '/bc4', biases['bc4'].numpy())
+            np.save(outdir + '/bc5', biases['bc5'].numpy())
+            np.save(outdir + '/bc6', biases['bc6'].numpy())
             
     # save out weights
     np.save(outdir + '/wc1', weights['wc1'].numpy())
@@ -175,12 +175,12 @@ def main(args):
     np.save(outdir + '/wc4', weights['wc4'].numpy())
     np.save(outdir + '/wc5', weights['wc5'].numpy())
     np.save(outdir + '/wc6', weights['wc6'].numpy())
-    np.save(outdir + '/bc1', weights['bc1'].numpy())
-    np.save(outdir + '/bc2', weights['bc2'].numpy())
-    np.save(outdir + '/bc3', weights['bc3'].numpy())
-    np.save(outdir + '/bc4', weights['bc4'].numpy())
-    np.save(outdir + '/bc5', weights['bc5'].numpy())
-    np.save(outdir + '/bc6', weights['bc6'].numpy())
+    np.save(outdir + '/bc1', biases['bc1'].numpy())
+    np.save(outdir + '/bc2', biases['bc2'].numpy())
+    np.save(outdir + '/bc3', biases['bc3'].numpy())
+    np.save(outdir + '/bc4', biases['bc4'].numpy())
+    np.save(outdir + '/bc5', biases['bc5'].numpy())
+    np.save(outdir + '/bc6', biases['bc6'].numpy())
 
 
 if __name__ == "__main__":
