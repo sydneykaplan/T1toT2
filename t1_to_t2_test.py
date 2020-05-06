@@ -1,7 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
 
 
 import nibabel as nib
@@ -11,9 +8,6 @@ import os
 import glob
 import math
 import sys
-
-
-# In[ ]:
 
 
 def get_images(imgdir):
@@ -38,9 +32,6 @@ def get_images(imgdir):
     
     # return image array
     return imgs, imgpaths
-
-
-# In[ ]:
 
 
 # Create some wrappers for simplicity
@@ -71,9 +62,6 @@ def cnn(x, weights, bias, batch_size, num_nodes):
     deconv3 = conv3dt(deconv2, weights['wc6'], bias['bc6'], (batch_size, 208, 300, 320, 1)) # hard coded size
     
     return deconv3
-
-
-# In[ ]:
 
 
 def main(args):
@@ -121,10 +109,9 @@ def main(args):
         # get image affine matrix
         t1img = nib.load(t1imgpaths[i])
         img = nib.Nifti1Image(t2pred[i, :, :, :, :], t1img.affine)
-        nib.save(outdir + os.path.basename(os.path.splitext(t1imgpaths[i])[0]) + '_t2.nii.gz')
+        nib.save(outdir + '/' + os.path.basename(os.path.splitext(t1imgpaths[i])[0]) + '_t2.nii.gz')
 
 
-# In[ ]:
 
 
 if __name__ == "__main__":
